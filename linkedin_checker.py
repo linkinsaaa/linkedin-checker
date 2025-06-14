@@ -58,17 +58,6 @@ LOG_DIR = application_path / 'logs'
 DEFAULT_INPUT_FILE = str(application_path / "linkedin_links.txt")
 DEFAULT_OUTPUT_DIR = str(application_path / "results")
 
-# Theme
-LINKIN_GREEN_THEME = {
-    "CTk": {"fg_color": ["#F0F2F5", "#121A12"]},
-    "CTkFrame": {"fg_color": ["#E8F5E9", "#203020"], "border_color": ["#388E3C", "#66BB6A"]},
-    "CTkButton": {"fg_color": ["#4CAF50", "#43A047"], "hover_color": ["#66BB6A", "#5CB85C"]},
-    "CTkLabel": {"text_color": ["#1B5E20", "#C8E6C9"]},
-    "CTkEntry": {"fg_color": ["#FFFFFF", "#1A281A"], "border_color": ["#4CAF50", "#66BB6A"]},
-    "CTkTextbox": {"fg_color": ["#FBFEFB", "#1A281A"], "border_color": ["#66BB6A", "#4CAF50"]},
-    "CTkProgressBar": {"fg_color": ["#C8E6C9", "#203020"], "progress_color": ["#4CAF50", "#66BB6A"]},
-}
-
 # Logger setup
 class QueueHandler(logging.Handler):
     def __init__(self, log_queue: queue.Queue):
@@ -184,12 +173,16 @@ class LinkedInChecker:
                 options.add_argument("--disable-gpu")
                 options.add_argument("--no-sandbox")
                 options.add_argument("--disable-dev-shm-usage")
+                options.add_argument("--disable-blink-features=AutomationControlled")
+                options.add_experimental_option("excludeSwitches", ["enable-automation"])
+                options.add_experimental_option('useAutomationExtension', False)
                 options.add_experimental_option("prefs", {
                     "profile.managed_default_content_settings.images": 2
                 })
                 
                 service = ChromeService(ChromeDriverManager().install())
                 self.driver = webdriver.Chrome(service=service, options=options)
+                self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             else:
                 options = FirefoxOptions()
                 if self.headless:
@@ -217,29 +210,45 @@ class LinkedInChecker:
         
         try:
             self.driver.get("https://www.linkedin.com/login")
+            time.sleep(random.uniform(2, 4))
             
             # Wait for login form
             username_field = WebDriverWait(self.driver, 20).until(
                 EC.presence_of_element_located((By.ID, "username"))
             )
+            username_field.clear()
             username_field.send_keys(account.email)
+            time.sleep(random.uniform(1, 2))
             
             password_field = self.driver.find_element(By.ID, "password")
+            password_field.clear()
             password_field.send_keys(account.password)
+            time.sleep(random.uniform(1, 2))
             
             submit_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
             submit_button.click()
             
             # Wait for login to complete
             WebDriverWait(self.driver, 30).until(
-                lambda driver: "feed" in driver.current_url or "checkpoint" in driver.current_url
+                lambda driver: "feed" in driver.current_url or "checkpoint" in driver.current_url or "challenge" in driver.current_url
             )
             
-            if "feed" in self.driver.current_url:
+            current_url = self.driver.current_url
+            if "feed" in current_url:
                 main_logger.info("Login successful")
                 return True
+            elif "checkpoint" in current_url or "challenge" in current_url:
+                main_logger.warning("Login requires verification - manual intervention needed")
+                if self.gui:
+                    if self.gui.show_security_challenge_dialog_modal():
+                        # Wait for user to resolve challenge
+                        WebDriverWait(self.driver, 60).until(
+                            lambda driver: "feed" in driver.current_url
+                        )
+                        return True
+                return False
             else:
-                main_logger.warning("Login may have failed or requires verification")
+                main_logger.warning("Login may have failed")
                 return False
                 
         except Exception as e:
@@ -251,6 +260,16 @@ class LinkedInChecker:
         
         if not self.input_file.exists():
             main_logger.error(f"Input file not found: {self.input_file}")
+            # Create sample file
+            try:
+                with open(self.input_file, 'w', encoding='utf-8') as f:
+                    f.write("# LinkedIn Premium Trial Links\n")
+                    f.write("# Add your links below (one per line)\n")
+                    f.write("# Example:\n")
+                    f.write("# https://www.linkedin.com/premium/survey/...\n")
+                main_logger.info(f"Created sample input file: {self.input_file}")
+            except Exception as e:
+                main_logger.error(f"Could not create sample file: {e}")
             return []
         
         try:
@@ -292,7 +311,7 @@ class LinkedInChecker:
             page_source = (self.driver.page_source or "").lower()
             
             # Check for rate limiting
-            rate_limit_keywords = ["security verification", "are you a human", "too many requests"]
+            rate_limit_keywords = ["security verification", "are you a human", "too many requests", "unusual activity"]
             if any(kw in page_title or kw in page_source for kw in rate_limit_keywords):
                 return LinkResult(
                     link=url, 
@@ -315,7 +334,8 @@ class LinkedInChecker:
             # Check for offer unavailable
             unavailable_keywords = [
                 "offer is no longer available", "this offer has expired", 
-                "sorry, this offer isn't available", "link has expired"
+                "sorry, this offer isn't available", "link has expired",
+                "not found", "404", "page not found"
             ]
             if any(kw in page_source for kw in unavailable_keywords):
                 return LinkResult(
@@ -329,11 +349,12 @@ class LinkedInChecker:
             # Check for working trial indicators
             trial_keywords = [
                 "try premium for free", "start your free month", "free trial",
-                "claim your gift", "redeem your gift", "activate your gift"
+                "claim your gift", "redeem your gift", "activate your gift",
+                "premium gift", "start premium", "get premium"
             ]
             
             has_trial_indicators = any(kw in page_source for kw in trial_keywords)
-            is_redeem_url = any(p in url.lower() for p in ["/redeem", "/gift", "/claim"])
+            is_redeem_url = any(p in url.lower() for p in ["/redeem", "/gift", "/claim", "/premium/survey"])
             
             if has_trial_indicators or is_redeem_url:
                 confidence = "HIGH" if is_redeem_url and has_trial_indicators else "MEDIUM"
@@ -378,9 +399,11 @@ class LinkedInChecker:
             working_file = self.output_dir / f"working_links_{timestamp}.txt"
             with open(working_file, 'w', encoding='utf-8') as f:
                 f.write("# Working LinkedIn Premium Trial Links\n")
-                f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"# Total found: {len(self.working_links)}\n\n")
                 for result in self.working_links:
-                    f.write(f"{result.link}\n")
+                    confidence_text = f" [Confidence: {result.confidence}]" if result.confidence else ""
+                    f.write(f"{result.link}{confidence_text}\n")
             main_logger.info(f"Saved {len(self.working_links)} working links to {working_file}")
         
         # Save detailed results
@@ -391,7 +414,8 @@ class LinkedInChecker:
                 "timestamp": timestamp,
                 "total_processed": len(all_results),
                 "working_found": len(self.working_links),
-                "failed": len(self.failed_links)
+                "failed": len(self.failed_links),
+                "rate_limited": self.stats['rate_limit_suspected']
             },
             "results": [asdict(result) for result in all_results]
         }
@@ -481,7 +505,7 @@ class LinkedInCheckerGUI:
     def __init__(self):
         # Set theme
         ctk.set_appearance_mode("dark")
-        ctk.set_default_color_theme("blue")
+        ctk.set_default_color_theme("green")
         
         # Setup logging
         self.log_queue = queue.Queue()
@@ -672,8 +696,8 @@ class LinkedInCheckerGUI:
             messagebox.showerror("Error", "Please enter your LinkedIn password")
             return False
         
-        if not input_file or not Path(input_file).exists():
-            messagebox.showerror("Error", "Please select a valid input file")
+        if not input_file:
+            messagebox.showerror("Error", "Please select an input file")
             return False
         
         return True
@@ -766,9 +790,6 @@ class LinkedInCheckerGUI:
         )
         self.stats_label.configure(text=stats_text)
     
-    def set_progress_max_value(self, max_value: int):
-        pass  # CTkProgressBar handles this automatically
-    
     def show_security_challenge_dialog_modal(self):
         result = messagebox.askyesno(
             "Security Challenge",
@@ -807,7 +828,9 @@ def check_prerequisites():
     if not SELENIUM_AVAILABLE:
         missing_libs.append("selenium and webdriver-manager")
     
-    if not hasattr(ctk, 'CTk'):
+    try:
+        import customtkinter as ctk
+    except ImportError:
         missing_libs.append("customtkinter")
     
     if missing_libs:
