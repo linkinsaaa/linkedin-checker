@@ -1,0 +1,75 @@
+('Z:\\home\\sws\\Desktop\\Linkedin '
+ 'Checker\\build\\LinkedInChecker\\LinkedInChecker.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'Z:\\home\\sws\\Desktop\\Linkedin '
+   'Checker\\build\\LinkedInChecker\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   'C:\\Program '
+   'Files\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth__tkinter.py',
+   'PYSOURCE'),
+  ('linkedin_checker',
+   'Z:\\home\\sws\\Desktop\\Linkedin Checker\\linkedin_checker.py',
+   'PYSOURCE')],
+ 'python311.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

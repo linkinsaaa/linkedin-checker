@@ -1,0 +1,4 @@
+# LinkedIn Premium Trial Links
+# Add your links below (one per line)
+# Example:
+# https://www.linkedin.com/premium/survey/your-link-here
