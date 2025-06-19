@@ -1,0 +1,42 @@
+{
+    "summary": {
+        "total_processed": 3,
+        "working_found": 0,
+        "failed_or_invalid": 3,
+        "rate_limit_suspected_current_account": 0,
+        "errors": 0
+    },
+    "generated_at": "2025-06-19T18:44:55.686813",
+    "results": {
+        "working": [],
+        "failed_or_invalid": [
+            {
+                "link": "http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z",
+                "status": "FAILED",
+                "result_details": "Offer unavailable/expired",
+                "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z&redeemType=GIFTING",
+                "line_num": 1,
+                "confidence": null,
+                "error": null
+            },
+            {
+                "link": "http://www.linkedin.com/premium/redeem/gift?_ed=iUjVbt9EJQ1-WNyNi_9SbT_z",
+                "status": "FAILED",
+                "result_details": "Offer unavailable/expired",
+                "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=iUjVbt9EJQ1-WNyNi_9SbT_z&redeemType=GIFTING",
+                "line_num": 2,
+                "confidence": null,
+                "error": null
+            },
+            {
+                "link": "http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI",
+                "status": "FAILED",
+                "result_details": "Offer unavailable/expired",
+                "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=dOWOiIYkb7PUaa1FXOpu39fI&redeemType=GIFTING",
+                "line_num": 3,
+                "confidence": null,
+                "error": null
+            }
+        ]
+    }
+}

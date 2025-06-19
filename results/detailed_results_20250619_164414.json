@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "timestamp": "20250619_164414",
+    "stats": {
+      "total_processed": 4,
+      "working_found": 2,
+      "failed_or_invalid": 1,
+      "rate_limit_suspected_current_account": 0,
+      "rate_limit_all_accounts": 0,
+      "errors": 1
+    }
+  },
+  "results": [
+    {
+      "link": "http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z",
+      "status": "FAILED",
+      "result_details": "Offer expired, unavailable, or already redeemed.",
+      "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z&redeemType=GIFTING",
+      "line_num": 1,
+      "confidence": null,
+      "error": null
+    },
+    {
+      "link": "http://www.linkedin.com/premium/redeem/gift?_ed=iUjVbt9EJQ1-WNyNi_9SbT_z",
+      "status": "WORKING",
+      "result_details": "Potential trial/gift offer found.",
+      "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=iUjVbt9EJQ1-WNyNi_9SbT_z&redeemType=GIFTING",
+      "line_num": 2,
+      "confidence": "HIGH",
+      "error": null
+    },
+    {
+      "link": "http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI",
+      "status": "WORKING",
+      "result_details": "Potential trial/gift offer found.",
+      "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=dOWOiIYkb7PUaa1FXOpu39fI&redeemType=GIFTING",
+      "line_num": 3,
+      "confidence": "HIGH",
+      "error": null
+    },
+    {
+      "link": "http://www.linkedin.com/premium/redeem/gift?_ed=r5CyRZBct6eq4SOyi-gZeIXovQ&mcid=7185883047605547008",
+      "status": "ERROR",
+      "result_details": "",
+      "final_url": null,
+      "line_num": 4,
+      "confidence": null,
+      "error": "WebDriver error: Message: WebDriver session does not exist, or is not active\nStacktrace:\nRemoteError@chrome://remote/"
+    }
+  ]
+}

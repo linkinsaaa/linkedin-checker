@@ -1,0 +1,6 @@
+# LinkedIn Premium Trial Link Checker
+# Generated on: 2025-06-19 16:33:10
+# Total Found: 2
+
+http://www.linkedin.com/premium/redeem/gift?_ed=iUjVbt9EJQ1-WNyNi_9SbT_z [Confidence: HIGH] # Details: Potential trial/gift offer found.
+http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI [Confidence: HIGH] # Details: Potential trial/gift offer found.

@@ -1,0 +1,21 @@
+{
+    "settings": {
+        "input_file": "/home/sws/Desktop/Linkedin Checker/linkedin_links.txt",
+        "output_dir": "/home/sws/Desktop/Linkedin Checker/results",
+        "delay_min": 2.0,
+        "delay_max": 5.0,
+        "headless": false,
+        "browser_type": "firefox",
+        "language": "en",
+        "theme": "dark",
+        "color_theme": "green",
+        "num_threads": 2,
+        "window_geometry": "850x898+1008+63"
+    },
+    "accounts": [
+        {
+            "email": "fawazsws2@gmail.com",
+            "password": "ahs12345ahs"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "timestamp": "20250619_170249",
+    "stats": {
+      "total_processed": 0,
+      "working_found": 0,
+      "failed_or_invalid": 0,
+      "rate_limit_suspected_current_account": 1,
+      "rate_limit_all_accounts": 0,
+      "errors": 0
+    }
+  },
+  "results": []
+}
