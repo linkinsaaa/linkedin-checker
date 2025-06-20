@@ -1,0 +1,167 @@
+{
+    "summary": {
+        "total_processed": 2,
+        "working_found": 0,
+        "failed_or_invalid": 2,
+        "rate_limit_suspected_current_account": 0,
+        "errors": 0,
+        "start_time": "2025-06-20 17:14:21.668586",
+        "end_time": "2025-06-20 17:15:33.608065",
+        "total_duration_seconds": 71.939479
+    },
+    "results": {
+        "working": [],
+        "failed_or_invalid": [
+            {
+                "link": "http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z",
+                "status": "FAILED",
+                "result_details": "Offer expired, unavailable, or already redeemed.",
+                "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z&redeemType=GIFTING",
+                "line_num": 1,
+                "confidence": null,
+                "error": null,
+                "account_email": "fawazsws2@gmail.com"
+            },
+            {
+                "link": "http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI",
+                "status": "FAILED",
+                "result_details": "Offer expired, unavailable, or already redeemed.",
+                "final_url": "https://www.linkedin.com/premium/redeem-v3/?_ed=dOWOiIYkb7PUaa1FXOpu39fI&redeemType=GIFTING",
+                "line_num": 3,
+                "confidence": null,
+                "error": null,
+                "account_email": "fawazsws2@gmail.com"
+            }
+        ]
+    },
+    "config_used": {
+        "settings": {
+            "input_file": "/home/sws/Desktop/Linkedin Checker/linkedin_links.txt",
+            "output_dir": "/home/sws/Desktop/Linkedin Checker/results",
+            "delay_min": 2.0,
+            "delay_max": 5.0,
+            "headless": false,
+            "browser_type": "firefox",
+            "language": "en",
+            "theme": "dark",
+            "color_theme": "green",
+            "num_threads": 1,
+            "window_geometry": "960x1008+950+-8",
+            "account_rest_duration_minutes": 30
+        },
+        "accounts": [
+            {
+                "email": "fawazsws2@gmail.com",
+                "password": "ahs12345ahs"
+            }
+        ],
+        "selectors": {
+            "username_field": [
+                "#username"
+            ],
+            "password_field": [
+                "#password"
+            ],
+            "login_submit_button": [
+                "//button[@type='submit']"
+            ],
+            "login_error_message": [
+                ".form__input--error",
+                ".form__message--error",
+                "[data-test-id='error-message']"
+            ],
+            "login_success_indicator": [
+                "//header[contains(@class, 'global-nav')]",
+                "#global-nav"
+            ],
+            "cookie_accept_button": [
+                "//button[@data-control-name='accept_cookies']",
+                "//button[contains(., 'Accept')]",
+                "//button[contains(., 'Agree')]"
+            ],
+            "action_buttons": [
+                "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'start free trial')]",
+                "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'try premium for free')]",
+                "//a[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'start your free month')]",
+                "//button[@data-test-id='accept-gift-button']",
+                "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'activate')]"
+            ],
+            "account_chooser_indicator": [
+                "#choose-account-page",
+                "h1.account-chooser__title"
+            ],
+            "account_chooser_button_template": [
+                "//button[contains(., '{email}')]"
+            ]
+        },
+        "keywords": {
+            "rate_limit": [
+                "security verification",
+                "captcha-internal",
+                "are you human",
+                "challenge",
+                "checkpoint"
+            ],
+            "unavailable": [
+                "offer has already been redeemed",
+                "offer is no longer available",
+                "this offer isn't available",
+                "link has expired",
+                "page not found",
+                "404",
+                "this page doesn’t exist",
+                "this page is unavailable",
+                "an error has occurred",
+                "something went wrong",
+                "offer unavailable"
+            ],
+            "already_premium": [
+                "already a premium member",
+                "your current plan",
+                "manage premium subscription",
+                "welcome to premium"
+            ],
+            "trial_positive": [
+                "claim this exclusive offer",
+                "get premium free",
+                "start your free month",
+                "free trial",
+                "claim your gift",
+                "redeem your gift",
+                "activate your gift",
+                "premium gift",
+                "start premium",
+                "get premium",
+                "unlock premium",
+                "your free trial awaits",
+                "special offer for you",
+                "try premium for 0",
+                "1-month free trial",
+                "accept your free upgrade",
+                "start my free trial",
+                "all you need to do is activate"
+            ],
+            "payment_form": [
+                "card number",
+                "credit card",
+                "payment method",
+                "billing address",
+                "paypal",
+                "add a card",
+                "confirm purchase",
+                "review your order",
+                "select payment"
+            ]
+        },
+        "urls": {
+            "login": "https://www.linkedin.com/login",
+            "auth_wall_substring": "authwall",
+            "feed": "/feed/"
+        },
+        "user_agents": [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+        ]
+    }
+}

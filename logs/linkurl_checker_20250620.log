@@ -1,0 +1,219 @@
+2025-06-20 14:01:24 | INFO     | LinkChecker_0   | ====== WebDriver manager ======
+2025-06-20 14:01:24 | INFO     | LinkChecker_0   | Get LATEST geckodriver version for 139.0 firefox
+2025-06-20 14:01:25 | INFO     | LinkChecker_0   | Get LATEST geckodriver version for 139.0 firefox
+2025-06-20 14:01:25 | INFO     | LinkChecker_0   | Get LATEST geckodriver version for 139.0 firefox
+2025-06-20 14:01:25 | INFO     | LinkChecker_0   | Getting latest mozilla release info for v0.36.0
+2025-06-20 14:01:25 | INFO     | LinkChecker_0   | About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+2025-06-20 14:01:26 | INFO     | LinkChecker_0   | Driver downloading response is 200
+2025-06-20 14:01:26 | INFO     | LinkChecker_0   | Get LATEST geckodriver version for 139.0 firefox
+2025-06-20 14:01:27 | INFO     | LinkChecker_0   | Driver has been saved in cache [/home/sws/.wdm/drivers/geckodriver/linux64/v0.36.0]
+2025-06-20 14:12:06 | INFO     | MainThread      | Checker initialized with 2 threads for browser 'firefox'
+2025-06-20 14:12:06 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 14:12:06 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 14:12:06 | INFO     | LinkChecker_1   | Worker 2 starting.
+2025-06-20 14:12:06 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 14:12:09 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 14:12:42 | ERROR    | LinkChecker_0   | Unexpected error during login for fawazsws2@gmail.com: Message: 
+Traceback (most recent call last):
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_checker.py", line 722, in setup_and_login
+    WebDriverWait(driver, 30).until(EC.any_of(
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 101, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-06-20 14:12:43 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 14:12:46 | INFO     | LinkChecker_1   | All available accounts are currently resting. Waiting...
+2025-06-20 14:12:50 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 14:12:51 | INFO     | LinkChecker_1   | All available accounts are currently resting. Waiting...
+2025-06-20 14:12:52 | INFO     | MainThread      | Stopping...
+2025-06-20 14:12:55 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 14:12:56 | INFO     | LinkChecker_1   | Worker 2 exiting.
+2025-06-20 14:12:56 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 16:40:09 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 16:40:12 | INFO     | MainThread      | Checker initialized with 2 threads for browser 'firefox'
+2025-06-20 16:40:12 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 16:40:12 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 16:40:12 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 16:40:12 | INFO     | LinkChecker_1   | Worker 2 starting.
+2025-06-20 16:40:16 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 16:40:21 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 16:40:36 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 16:40:39 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 16:40:42 | INFO     | LinkChecker_1   | All available accounts are currently resting. Waiting...
+2025-06-20 16:40:44 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 16:40:47 | INFO     | MainThread      | Stopping...
+2025-06-20 16:40:47 | INFO     | LinkChecker_1   | Worker 2 exiting.
+2025-06-20 16:40:49 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 16:40:49 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 16:46:49 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 16:46:52 | INFO     | MainThread      | Checker initialized with 2 threads for browser 'firefox'
+2025-06-20 16:46:52 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 16:46:52 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 16:46:52 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 16:46:52 | INFO     | LinkChecker_1   | Worker 2 starting.
+2025-06-20 16:46:56 | INFO     | LinkChecker_0   | Loaded 15 session cookies for fawazsws2@gmail.com.
+2025-06-20 16:47:01 | INFO     | LinkChecker_0   | Successfully resumed session for fawazsws2@gmail.com using cookies.
+2025-06-20 16:47:16 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 16:47:18 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 16:47:21 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link.
+2025-06-20 16:47:40 | INFO     | MainThread      | Stopping...
+2025-06-20 16:47:42 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 16:47:42 | INFO     | LinkChecker_1   | Worker 2 exiting.
+2025-06-20 16:47:42 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 16:47:42 | INFO     | MainChecker     | Saved detailed JSON results to: /home/sws/Desktop/Linkedin Checker/results/detailed_results_2025-06-20_16-47-42.json
+2025-06-20 16:47:49 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 16:47:49 | INFO     | MainChecker     | cleared_state_file_info
+2025-06-20 16:47:49 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 16:47:49 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 16:47:49 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 16:47:52 | INFO     | LinkChecker_0   | Loaded 15 session cookies for fawazsws2@gmail.com.
+2025-06-20 16:47:56 | WARNING  | LinkChecker_0   | Cookie session for fawazsws2@gmail.com is invalid. Proceeding with full login.
+2025-06-20 16:47:56 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 16:48:06 | WARNING  | LinkChecker_0   | Failed to find element with any of the provided selectors: ['#username']
+2025-06-20 16:48:16 | WARNING  | LinkChecker_0   | Failed to find element with any of the provided selectors: ['#password']
+2025-06-20 16:48:22 | INFO     | MainThread      | Stopping...
+2025-06-20 16:48:27 | ERROR    | LinkChecker_0   | Error during login process for fawazsws2@gmail.com: NoSuchElementException
+2025-06-20 16:48:28 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 16:48:33 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 16:48:33 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 16:54:16 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 16:54:18 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 16:54:18 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 16:54:18 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 16:54:18 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 16:54:22 | INFO     | LinkChecker_0   | Loaded 15 session cookies for fawazsws2@gmail.com.
+2025-06-20 16:54:22 | ERROR    | LinkChecker_0   | Error during login process for fawazsws2@gmail.com: InvalidArgumentException
+2025-06-20 16:54:22 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 16:54:25 | INFO     | MainThread      | Stopping...
+2025-06-20 16:54:30 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 16:54:30 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 16:59:57 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 16:59:58 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 16:59:58 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 16:59:58 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 16:59:58 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:00:02 | INFO     | LinkChecker_0   | Loaded 0/15 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:00:02 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:00:08 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:00:23 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:00:27 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 17:00:30 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link.
+2025-06-20 17:00:36 | INFO     | MainThread      | Stopping...
+2025-06-20 17:00:41 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:00:41 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:00:41 | INFO     | MainChecker     | Saved detailed JSON results to: /home/sws/Desktop/Linkedin Checker/results/detailed_results_2025-06-20_17-00-41.json
+2025-06-20 17:07:12 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:07:17 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:07:17 | INFO     | MainChecker     | cleared_state_file_info
+2025-06-20 17:07:17 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:07:17 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:07:17 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:07:20 | INFO     | LinkChecker_0   | Loaded 0/16 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:07:21 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:07:25 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:07:40 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:07:45 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 17:07:55 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link and restarting session.
+2025-06-20 17:07:56 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:07:59 | INFO     | LinkChecker_0   | Loaded 0/13 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:08:00 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:08:05 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:08:20 | INFO     | LinkChecker_0   | Processing Link 2/5: http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI (from Line 3) with fawazsws2@gmail.com
+2025-06-20 17:08:23 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 17:08:26 | INFO     | MainThread      | Stopping...
+2025-06-20 17:08:31 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link and restarting session.
+2025-06-20 17:08:32 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:08:32 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:08:32 | INFO     | MainChecker     | Saved detailed JSON results to: /home/sws/Desktop/Linkedin Checker/results/detailed_results_2025-06-20_17-08-32.json
+2025-06-20 17:14:20 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:14:21 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:14:21 | INFO     | MainChecker     | cleared_state_file_info
+2025-06-20 17:14:21 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:14:21 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:14:21 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:14:24 | INFO     | LinkChecker_0   | Loaded 0/16 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:14:25 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:14:29 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:14:44 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:14:48 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 17:14:56 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link and restarting session.
+2025-06-20 17:14:57 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:15:00 | INFO     | LinkChecker_0   | Loaded 0/12 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:15:01 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:15:05 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:15:21 | INFO     | LinkChecker_0   | Processing Link 2/5: http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI (from Line 3) with fawazsws2@gmail.com
+2025-06-20 17:15:24 | WARNING  | LinkChecker_0   | FAILURE: Link http://www.linkedin.com/premium/redeem/gift?_ed=dOWOiIYkb7PUaa1FXOpu39fI is FAILED. Details: Offer expired, unavailable, or already redeemed.
+2025-06-20 17:15:28 | INFO     | MainThread      | Stopping...
+2025-06-20 17:15:33 | WARNING  | LinkChecker_0   | Session lost for fawazsws2@gmail.com before processing. Re-queuing link and restarting session.
+2025-06-20 17:15:33 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:15:33 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:15:33 | INFO     | MainChecker     | Saved detailed JSON results to: /home/sws/Desktop/Linkedin Checker/results/detailed_results_2025-06-20_17-15-33.json
+2025-06-20 17:20:53 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:20:55 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:20:55 | INFO     | MainChecker     | cleared_state_file_info
+2025-06-20 17:20:55 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:20:55 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:20:55 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:20:59 | INFO     | LinkChecker_0   | Loaded 0/13 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:21:00 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:21:04 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:21:19 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:21:22 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 17:21:23 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 17:21:25 | INFO     | MainThread      | Stopping...
+2025-06-20 17:21:28 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:21:28 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:29:46 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:29:46 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:29:46 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:29:46 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:29:49 | INFO     | LinkChecker_0   | Loaded 0/13 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:29:50 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:29:55 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:30:10 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:30:13 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 17:30:14 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 17:30:19 | INFO     | MainThread      | Stopping...
+2025-06-20 17:30:19 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:30:19 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:47:47 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:47:48 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:47:48 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:47:48 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:47:48 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:47:51 | INFO     | LinkChecker_0   | Loaded 0/14 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:47:54 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:48:14 | WARNING  | LinkChecker_0   | Login failed for fawazsws2@gmail.com. Unexpected page: https://www.linkedin.com/feed/
+2025-06-20 17:48:15 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 17:48:15 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 17:48:20 | INFO     | MainThread      | Stopping...
+2025-06-20 17:48:20 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:48:20 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:52:49 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:52:51 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:52:51 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:52:51 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:52:51 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:52:54 | INFO     | LinkChecker_0   | Loaded 0/14 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:52:55 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:53:00 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 17:53:15 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 17:53:19 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 17:53:19 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 17:53:21 | INFO     | MainThread      | Stopping...
+2025-06-20 17:53:24 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 17:53:24 | INFO     | MainChecker     | Checking process was stopped by user.
+2025-06-20 17:59:34 | INFO     | MainThread      | Keyboard interrupt received, shutting down.
+2025-06-20 17:59:37 | INFO     | MainThread      | Checker initialized with 1 threads for browser 'firefox'
+2025-06-20 17:59:37 | INFO     | MainChecker     | 5 links found to process.
+2025-06-20 17:59:37 | INFO     | LinkChecker_0   | Worker 1 starting.
+2025-06-20 17:59:37 | INFO     | LinkChecker_0   | Setting up WebDriver for account fawazsws2@gmail.com...
+2025-06-20 17:59:40 | INFO     | LinkChecker_0   | Loaded 0/13 session cookies for fawazsws2@gmail.com.
+2025-06-20 17:59:41 | INFO     | LinkChecker_0   | Attempting full login for fawazsws2@gmail.com...
+2025-06-20 17:59:46 | INFO     | LinkChecker_0   | Login successful for fawazsws2@gmail.com.
+2025-06-20 18:00:01 | INFO     | LinkChecker_0   | Processing Link 1/5: http://www.linkedin.com/premium/redeem/gift?_ed=B_GyNqi8kb2iLtpM7_LMyf-Z (from Line 1) with fawazsws2@gmail.com
+2025-06-20 18:00:05 | WARNING  | LinkChecker_0   | Account fawazsws2@gmail.com is resting for 30 mins.
+2025-06-20 18:00:05 | INFO     | LinkChecker_0   | All available accounts are currently resting. Waiting...
+2025-06-20 18:00:10 | INFO     | MainThread      | Stopping...
+2025-06-20 18:00:10 | INFO     | LinkChecker_0   | Worker 1 exiting.
+2025-06-20 18:00:10 | INFO     | MainChecker     | Checking process was stopped by user.
