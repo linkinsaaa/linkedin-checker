@@ -5,20 +5,16 @@
         "delay_min": 2.0,
         "delay_max": 5.0,
         "headless": false,
-        "browser_type": "firefox",
         "language": "en",
         "theme": "dark",
         "color_theme": "green",
         "num_threads": 1,
-        "window_geometry": "961x1008+939+-8",
-        "account_rest_duration_minutes": 30
+        "window_geometry": "1920x1008+0+0",
+        "account_rest_duration_minutes": 30,
+        "page_load_timeout": 60,
+        "browser_type": "firefox"
     },
-    "accounts": [
-        {
-            "email": "fawazsws2@gmail.com",
-            "password": "ahs12345ahs"
-        }
-    ],
+    "accounts_text": "fawazsws2@gmail.com:ahs12345",
     "selectors": {
         "username_field": [
             "#username"
@@ -58,6 +54,56 @@
             "//button[contains(., '{email}')]"
         ]
     },
+    "markers": {
+        "valid": [
+            "start your free",
+            "start premium",
+            "your free trial awaits",
+            "claim your gift",
+            "activate offer",
+            "free month",
+            "linkedin premium"
+        ],
+        "invalid": [
+            "offer unavailable",
+            "offer is no longer available",
+            "already been redeemed",
+            "link has expired",
+            "page not found",
+            "this page is unavailable",
+            "this page isn't available",
+            "something went wrong"
+        ],
+        "already_premium": [
+            "you are already a premium member",
+            "manage premium subscription",
+            "your current plan"
+        ],
+        "rate_limit": [
+            "are you human",
+            "security verification",
+            "captcha",
+            "challenge checkpoint",
+            "unusual activity",
+            "verify you're human"
+        ],
+        "login_redirect": [
+            "/login",
+            "/authwall",
+            "authentication required"
+        ]
+    },
+    "user_agents": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+    ],
+    "accounts": [
+        {
+            "email": "fawazsws2@gmail.com",
+            "password": "ahs12345ahs"
+        }
+    ],
     "keywords": {
         "rate_limit": [
             "security verification",
@@ -121,10 +167,5 @@
         "login": "https://www.linkedin.com/login",
         "auth_wall_substring": "authwall",
         "feed": "/feed/"
-    },
-    "user_agents": [
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
-    ]
+    }
 }

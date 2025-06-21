@@ -1,0 +1,95 @@
+2025-06-21 13:16:22 | INFO     | MainThread      | Checker initialized with 1 threads.
+2025-06-21 13:16:22 | INFO     | MainChecker     | 5 unique, unprocessed links found.
+2025-06-21 13:16:22 | INFO     | LinkChecker_0   | Worker 1 started.
+2025-06-21 13:16:22 | INFO     | LinkChecker_0   | Attempting to start session for fawazsws2@gmail.com.
+2025-06-21 13:16:22 | INFO     | LinkChecker_0   | Using undetected-chromedriver for enhanced stealth.
+2025-06-21 13:16:23 | ERROR    | MainChecker     | Worker thread error: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: useAutomationExtension
+Stacktrace:
+#0 0x571ee6e0545a <unknown>
+#1 0x571ee68aa760 <unknown>
+#2 0x571ee68d769b <unknown>
+#3 0x571ee68d8da5 <unknown>
+#4 0x571ee68d3f4d <unknown>
+#5 0x571ee692ec58 <unknown>
+#6 0x571ee692e5ae <unknown>
+#7 0x571ee69301c2 <unknown>
+#8 0x571ee692ff96 <unknown>
+#9 0x571ee6921c23 <unknown>
+#10 0x571ee68ee4a5 <unknown>
+#11 0x571ee68ef111 <unknown>
+#12 0x571ee6dc9f1b <unknown>
+#13 0x571ee6dcde19 <unknown>
+#14 0x571ee6db0ac9 <unknown>
+#15 0x571ee6dce9c8 <unknown>
+#16 0x571ee6d9534f <unknown>
+#17 0x571ee6df2a28 <unknown>
+#18 0x571ee6df2c06 <unknown>
+#19 0x571ee6e04336 <unknown>
+#20 0x70e86cc9caa4 <unknown>
+#21 0x70e86cd29c3c <unknown>
+Traceback (most recent call last):
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_checker.py", line 467, in run
+    try: future.result()
+         ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_checker.py", line 418, in worker_thread
+    driver, login_status = self.setup_and_login(account)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_checker.py", line 333, in setup_and_login
+    driver = self.driver_manager.create_driver()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_checker.py", line 268, in create_driver
+    driver = uc.Chrome(options=options, use_subprocess=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/undetected_chromedriver/__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 56, in __init__
+    super().__init__(
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/undetected_chromedriver/__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/home/sws/Desktop/Linkedin Checker/linkedin_env/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: useAutomationExtension
+Stacktrace:
+#0 0x571ee6e0545a <unknown>
+#1 0x571ee68aa760 <unknown>
+#2 0x571ee68d769b <unknown>
+#3 0x571ee68d8da5 <unknown>
+#4 0x571ee68d3f4d <unknown>
+#5 0x571ee692ec58 <unknown>
+#6 0x571ee692e5ae <unknown>
+#7 0x571ee69301c2 <unknown>
+#8 0x571ee692ff96 <unknown>
+#9 0x571ee6921c23 <unknown>
+#10 0x571ee68ee4a5 <unknown>
+#11 0x571ee68ef111 <unknown>
+#12 0x571ee6dc9f1b <unknown>
+#13 0x571ee6dcde19 <unknown>
+#14 0x571ee6db0ac9 <unknown>
+#15 0x571ee6dce9c8 <unknown>
+#16 0x571ee6d9534f <unknown>
+#17 0x571ee6df2a28 <unknown>
+#18 0x571ee6df2c06 <unknown>
+#19 0x571ee6e04336 <unknown>
+#20 0x70e86cc9caa4 <unknown>
+#21 0x70e86cd29c3c <unknown>
+
+2025-06-21 13:16:23 | INFO     | MainChecker     | All worker threads have completed.
